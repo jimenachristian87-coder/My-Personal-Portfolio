@@ -1,9 +1,10 @@
- /*
+/*
 ========================================
   PERSONAL PORTFOLIO - CSS STYLESHEET
 ========================================
-  BY: Christian L. Jimena
+  Author: Christian L. Jimena
 ========================================
+*/
 
 /* CSS Custom Properties - Color Variables */
 :root {
@@ -289,7 +290,11 @@ section {
 /* Skill Tags Container */
 .skill-tags {
     display: flex;
+<<<<<<< HEAD
     flex-direction: column;
+=======
+    flex-wrap: wrap;
+>>>>>>> 8193d416ad05d3c5e00ed053cf2bfa970cc6d732
     gap: 10px;
 }
 
@@ -301,7 +306,10 @@ section {
     border-radius: 6px;
     font-size: 14px;
     font-weight: 500;
+<<<<<<< HEAD
     text-align: left;
+=======
+>>>>>>> 8193d416ad05d3c5e00ed053cf2bfa970cc6d732
 }
 
 /*
@@ -567,6 +575,7 @@ section {
     color: var(--primary-color);
 }
 
+<<<<<<< HEAD
 /* Brand-specific social link colors */
 .facebook-icon {
     color: white;
@@ -590,6 +599,8 @@ section {
     filter: brightness(0) saturate(100%) invert(34%) sepia(96%) saturate(748%) hue-rotate(87deg) brightness(102%) contrast(105%);
 }
 
+=======
+>>>>>>> 8193d416ad05d3c5e00ed053cf2bfa970cc6d732
 /* Footer Bottom - Copyright */
 .footer-bottom {
     text-align: center;
