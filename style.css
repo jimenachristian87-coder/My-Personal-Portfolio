@@ -610,7 +610,6 @@ section {
     }
     
     .nav-menu {
-        flex-direction: column;
         gap: 15px;
         text-align: center;
     }
