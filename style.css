@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #2563eb;      
-    --secondary-color: #1e293b;    
-    --light-color: #f8fafc;         
-    --text-dark: #0f172a;        
-    --text-light: #64748b;         
-    --white: #ffffff;              
+    --primary-color: #2563eb;
+    --secondary-color: #1e293b;
+    --light-color: #f8fafc;
+    --text-dark: #0f172a;
+    --text-light: #64748b;
+    --white: #ffffff;
 }
 
 * {
@@ -27,7 +27,7 @@ a {
 
 ul {
     list-style: none;
-} 
+}
 
 img {
     max-width: 100%;
@@ -76,7 +76,19 @@ img {
     color: var(--primary-color);
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
 
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    margin: 3px 0;
+    transition: 0.3s;
+}
 
 .hero {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
@@ -111,7 +123,6 @@ img {
     justify-content: center;
     flex-wrap: wrap;
 }
-
 
 .btn {
     padding: 12px 30px;
@@ -238,7 +249,6 @@ section {
     border-radius: 6px;
     font-size: 14px;
     font-weight: 500;
-    text-align: left;
 }
 
 .projects {
@@ -474,7 +484,8 @@ section {
     border-radius: 2px;
 }
 
-.instagram-logo {
+.instagram-logo,
+.spotify-logo {
     width: 16px;
     height: 16px;
     vertical-align: middle;
@@ -482,10 +493,6 @@ section {
 }
 
 .spotify-logo {
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    margin-right: 5px;
     filter: brightness(0) saturate(100%) invert(34%) sepia(96%) saturate(748%) hue-rotate(87deg) brightness(102%) contrast(105%);
 }
 
@@ -536,14 +543,8 @@ section {
         font-size: 16px;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-
+    .about-grid,
+    .skills-grid,
     .projects-grid {
         grid-template-columns: 1fr;
     }
@@ -606,5 +607,21 @@ section {
 
     .project-links {
         justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
     }
 }
