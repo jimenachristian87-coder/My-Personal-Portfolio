@@ -1,4 +1,4 @@
-:root {
+:root { 
     --primary-color: #2563eb;
     --secondary-color: #1e293b;
     --light-color: #f8fafc;
@@ -52,7 +52,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .logo {
@@ -74,20 +74,6 @@ img {
 
 .nav-menu a:hover {
     color: var(--primary-color);
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: var(--text-dark);
-    margin: 3px 0;
-    transition: 0.3s;
 }
 
 .hero {
@@ -249,6 +235,7 @@ section {
     border-radius: 6px;
     font-size: 14px;
     font-weight: 500;
+    text-align: left;
 }
 
 .projects {
@@ -501,7 +488,63 @@ section {
     color: rgba(255, 255, 255, 0.7);
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-dark);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
 @media (max-width: 1024px) {
+    .about-grid,
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .about-card,
+    .skill-category,
+    .project-card {
+        text-align: center;
+        max-width: 450px;
+    }
+
+    .skill-tags {
+        align-items: center;
+    }
+
+    .project-tags,
+    .project-links {
+        justify-content: center;
+    }
+
+    .project-content {
+        text-align: center;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 768px) {
     .hamburger {
         display: flex;
     }
@@ -510,52 +553,48 @@ section {
         display: none;
     }
 
-    .nav .container {
-        flex-direction: row;
-        gap: 15px;
-    }
-
-    .hero {
-        padding: 80px 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 32px;
-    }
-
-    .hero-subtitle {
-        font-size: 18px;
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-    }
-
-    .section-title {
-        font-size: 32px;
-    }
-
-    .section-description {
-        font-size: 16px;
-    }
-
     .about-grid,
     .skills-grid,
     .projects-grid {
         grid-template-columns: 1fr;
     }
 
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .skill-tag {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 60px 20px;
     }
 
     .contact-form {
-        padding: 25px;
+        padding: 30px 20px;
     }
 
     .footer-content {
@@ -564,49 +603,11 @@ section {
         text-align: center;
     }
 
-    .social-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero-buttons {
+    .contact-item {
+        justify-content: center;
+        text-align: center;
         flex-direction: column;
         align-items: center;
-    }
-
-    .btn {
-        width: 100%;
-        max-width: 300px;
-        padding: 14px 20px;
-        font-size: 16px;
-    }
-
-    .skill-category {
-        text-align: center;
-    }
-
-    .skill-tags {
-        align-items: center;
-    }
-
-    .skill-tag {
-        text-align: center;
-        width: fit-content;
-        margin: 0 auto;
-    }
-
-    .project-content {
-        text-align: center;
-    }
-
-    .project-tags {
-        justify-content: center;
-    }
-
-    .project-links {
-        justify-content: center;
     }
 }
 
@@ -622,6 +623,14 @@ section {
 
     .btn {
         width: 100%;
-        max-width: 250px;
+        max-width: 260px;
+    }
+
+    .section-title,
+    .section-description,
+    .about-card h3,
+    .skill-category h3,
+    .project-content h3 {
+        text-align: center;
     }
 }
