@@ -1,12 +1,3 @@
-/*
-========================================
-  PERSONAL PORTFOLIO - CSS STYLESHEET
-========================================
-  Author: Christian L. Jimena
-========================================
-*/
-
-/* CSS Custom Properties - Color Variables */
 :root {
     --primary-color: #2563eb;      
     --secondary-color: #1e293b;    
@@ -22,7 +13,6 @@
     box-sizing: border-box;
 }
 
-/* Body Styles - Base typography and colors */
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
@@ -30,41 +20,26 @@ body {
     background-color: var(--white);
 }
 
-/* Link Styles - Remove default underline */
 a {
     text-decoration: none;
     color: inherit;
 }
 
-/* List Styles - Remove default bullets */
 ul {
     list-style: none;
-}
+} 
 
-/* Image Styles - Responsive images */
 img {
     max-width: 100%;
     height: auto;
 }
 
-/*
-========================================
-  LAYOUT - CONTAINER
-========================================
-*/
-
-/* Container - Centers content and provides max-width */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/*
-========================================
-  HEADER AND NAVIGATION
-========================================
-*/
 .header {
     background-color: var(--white);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -101,13 +76,8 @@ img {
     color: var(--primary-color);
 }
 
-/*
-========================================
-  HERO SECTION
-========================================
-*/
 
-/* Hero Section - Gradient background with centered content */
+
 .hero {
     background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
     color: var(--white);
@@ -115,20 +85,17 @@ img {
     text-align: center;
 }
 
-/* Hero Title - Main heading */
 .hero-content h1 {
     font-size: 48px;
     margin-bottom: 20px;
 }
 
-/* Hero Subtitle - Job title */
 .hero-subtitle {
     font-size: 24px;
     margin-bottom: 15px;
     opacity: 0.9;
 }
 
-/* Hero Description - Introduction text */
 .hero-description {
     font-size: 18px;
     margin-bottom: 30px;
@@ -138,7 +105,6 @@ img {
     margin-right: auto;
 }
 
-/* Hero Buttons Container - Call-to-action buttons */
 .hero-buttons {
     display: flex;
     gap: 15px;
@@ -146,11 +112,7 @@ img {
     flex-wrap: wrap;
 }
 
-/*
-========================================
-  BUTTONS
-========================================
-*/
+
 .btn {
     padding: 12px 30px;
     border-radius: 8px;
@@ -181,18 +143,10 @@ img {
     color: var(--primary-color);
 }
 
-/*
-========================================
-  SECTION STYLES - COMMON
-========================================
-*/
-
-/* Section - Consistent padding for all sections */
 section {
     padding: 80px 20px;
 }
 
-/* Section Title - Main heading for each section */
 .section-title {
     font-size: 40px;
     text-align: center;
@@ -200,7 +154,6 @@ section {
     color: var(--text-dark);
 }
 
-/* Section Description - Subtitle text */
 .section-description {
     text-align: center;
     color: var(--text-light);
@@ -211,11 +164,6 @@ section {
     margin-right: auto;
 }
 
-/*
-========================================
-  ABOUT SECTION
-========================================
-*/
 .about {
     background-color: var(--white);
 }
@@ -254,25 +202,16 @@ section {
     color: var(--text-light);
 }
 
-/*
-========================================
-  SKILLS SECTION
-========================================
-*/
-
-/* Skills Section Background */
 .skills {
     background-color: var(--light-color);
 }
 
-/* Skills Grid - 3 column layout */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
-/* Skill Category - Individual skill group card */
 .skill-category {
     background-color: var(--white);
     padding: 30px;
@@ -280,21 +219,18 @@ section {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Category Title */
 .skill-category h3 {
     font-size: 24px;
     margin-bottom: 20px;
     color: var(--text-dark);
 }
 
-/* Skill Tags Container */
 .skill-tags {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* Individual Skill Tag */
 .skill-tag {
     padding: 8px 16px;
     background-color: var(--light-color);
@@ -305,11 +241,6 @@ section {
     text-align: left;
 }
 
-/*
-========================================
-  PROJECTS SECTION
-========================================
-*/
 .projects {
     background-color: var(--white);
 }
@@ -392,52 +323,39 @@ section {
     color: var(--secondary-color);
 }
 
-/*
-========================================
-  CONTACT SECTION
-========================================
-*/
-
-/* Contact Section Background */
 .contact {
     background-color: var(--light-color);
 }
 
-/* Contact Grid - 2 column layout (info + form) */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
 }
 
-/* Contact Info Title */
 .contact-info h3 {
     font-size: 28px;
     margin-bottom: 15px;
     color: var(--text-dark);
 }
 
-/* Contact Info Description */
 .contact-info > p {
     color: var(--text-light);
     margin-bottom: 30px;
 }
 
-/* Contact Details Container */
 .contact-details {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* Individual Contact Item */
 .contact-item {
     display: flex;
     gap: 15px;
     align-items: flex-start;
 }
 
-/* Contact Icon - Emoji icon with background */
 .contact-icon {
     font-size: 32px;
     width: 50px;
@@ -450,14 +368,12 @@ section {
     flex-shrink: 0;
 }
 
-/* Contact Label - Small label text */
 .contact-label {
     color: var(--text-light);
     font-size: 14px;
     margin-bottom: 5px;
 }
 
-/* Contact Links - Email and phone */
 .contact-item a {
     color: var(--primary-color);
     font-weight: 500;
@@ -467,11 +383,6 @@ section {
     text-decoration: underline;
 }
 
-/*
-========================================
-  CONTACT FORM
-========================================
-*/
 .contact-form {
     background-color: var(--white);
     padding: 40px;
@@ -517,20 +428,12 @@ section {
     cursor: pointer;
 }
 
-/*
-========================================
-  FOOTER
-========================================
-*/
-
-/* Footer - Dark background */
 .footer {
     background-color: var(--secondary-color);
     color: var(--white);
     padding: 40px 20px 20px;
 }
 
-/* Footer Content - Info and social links */
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -540,24 +443,20 @@ section {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Footer Info Title */
 .footer-info h3 {
     font-size: 24px;
     margin-bottom: 8px;
 }
 
-/* Footer Info Description */
 .footer-info p {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Social Links Container */
 .social-links {
     display: flex;
     gap: 20px;
 }
 
-/* Individual Social Link */
 .social-link {
     color: var(--white);
     font-weight: 500;
@@ -568,7 +467,6 @@ section {
     color: var(--primary-color);
 }
 
-/* Brand-specific social link colors */
 .facebook-icon {
     color: white;
     background-color: #1877F2;
@@ -591,27 +489,23 @@ section {
     filter: brightness(0) saturate(100%) invert(34%) sepia(96%) saturate(748%) hue-rotate(87deg) brightness(102%) contrast(105%);
 }
 
-/* Footer Bottom - Copyright */
 .footer-bottom {
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
 }
 
-/*
-========================================
-  RESPONSIVE DESIGN - MOBILE
-  Media Query for screens smaller than 768px
-========================================
-*/
-@media (max-width: 768px) {
-    .nav .container {
-        flex-direction: column;
-        gap: 15px;
+@media (max-width: 1024px) {
+    .hamburger {
+        display: flex;
     }
-    
+
     .nav-menu {
+        display: none;
+    }
+
+    .nav .container {
+        flex-direction: row;
         gap: 15px;
-        text-align: center;
     }
     
     .hero {
