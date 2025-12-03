@@ -544,13 +544,48 @@ section {
     }
 }
 
+/* --------------------------------------------------------- */
+/* -------------------  MOBILE FIX (YOUR ISSUE) ------------ */
+/* --------------------------------------------------------- */
+
 @media (max-width: 768px) {
+
     .hamburger {
         display: flex;
     }
 
+    /* MOBILE DROPDOWN MENU FIX */
     .nav-menu {
         display: none;
+        flex-direction: column;
+        gap: 20px;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: var(--white);
+        width: 200px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+
+    /* Show menu on nav hover/tap */
+    .nav:hover .nav-menu {
+        display: flex !important;
+    }
+
+    .nav-menu a {
+        padding: 10px 0;
+        text-align: right;
+        font-size: 16px;
+    }
+
+    /* CENTER LET’S CONNECT */
+    .contact-info {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .about-grid,
