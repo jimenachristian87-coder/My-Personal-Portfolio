@@ -549,38 +549,25 @@ section {
 /* --------------------------------------------------------- */
 
 @media (max-width: 768px) {
-
-    .hamburger {
-        display: flex;
-    }
-
-    /* MOBILE DROPDOWN MENU FIX */
+    /* NAV MENU ALWAYS VISIBLE ON MOBILE */
     .nav-menu {
-        display: none;
+        display: flex;
         flex-direction: column;
         gap: 20px;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: var(--white);
-        width: 200px;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-    }
-
-    /* Show menu on nav hover/tap */
-    .nav:hover .nav-menu {
-        display: flex !important;
+        position: static;
+        background: none;
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
     }
 
     .nav-menu a {
         padding: 10px 0;
-        text-align: right;
+        text-align: center;
         font-size: 16px;
     }
 
-    /* CENTER LET’S CONNECT */
+    /* CENTER CONTACT INFO */
     .contact-info {
         text-align: center;
         display: flex;
@@ -646,26 +633,3 @@ section {
     }
 }
 
-@media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn {
-        width: 100%;
-        max-width: 260px;
-    }
-
-    .section-title,
-    .section-description,
-    .about-card h3,
-    .skill-category h3,
-    .project-content h3 {
-        text-align: center;
-    }
-}
