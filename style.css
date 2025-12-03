@@ -549,87 +549,111 @@ section {
 /* --------------------------------------------------------- */
 
 @media (max-width: 768px) {
-    /* NAV MENU ALWAYS VISIBLE ON MOBILE */
+    /* NAV MENU: stack vertically and center */
     .nav-menu {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        position: static;
-        background: none;
+        align-items: center;   /* centers horizontally */
+        gap: 15px;
         width: 100%;
-        padding: 0;
-        box-shadow: none;
+        padding: 15px 0;
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .nav-menu a {
-        padding: 10px 0;
-        text-align: center;
         font-size: 16px;
+        font-weight: 600;
+        color: var(--primary-color);
+        padding: 8px 0;
+        text-align: center;
+        width: 100%;
+        transition: color 0.3s;
     }
 
-    /* CENTER CONTACT INFO */
-    .contact-info {
+    .nav-menu a:hover {
+        color: var(--secondary-color);
+    }
+
+    /* HERO SECTION */
+    .hero {
+        padding: 60px 20px;
         text-align: center;
-        display: flex;
+    }
+
+    .hero-content h1 {
+        font-size: 26px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        max-width: 90%;
+        margin: 0 auto 20px;
+    }
+
+    .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 12px;
     }
 
+    .btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
+    /* ABOUT, SKILLS, PROJECTS: single column, centered */
     .about-grid,
     .skills-grid,
     .projects-grid {
         grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .about-card,
+    .skill-category,
+    .project-card {
+        text-align: center;
+        max-width: 90%;
     }
 
     .skill-tag {
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto;
         text-align: center;
     }
 
-    .hero {
-        padding: 80px 20px;
-    }
-
-    .hero-buttons {
+    .project-tags,
+    .project-links {
         justify-content: center;
     }
 
-    .hero-content h1 {
-        font-size: 28px;
+    /* CONTACT SECTION */
+    .contact-info {
+        text-align: center;
+        align-items: center;
     }
 
-    .hero-subtitle {
-        font-size: 20px;
-    }
-
-    .hero-description {
-        font-size: 16px;
-    }
-
-    .section-title {
-        font-size: 28px;
-    }
-
-    section {
-        padding: 60px 20px;
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .contact-form {
-        padding: 30px 20px;
+        padding: 25px 20px;
     }
 
+    /* FOOTER */
     .footer-content {
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
-
-    .contact-item {
-        justify-content: center;
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
-    }
 }
+
 
